@@ -1,0 +1,471 @@
+
+body {
+    margin: 1cm 1cm 1cm 1cm;
+    background-color: #F0F8FF;
+    font-family: 'Pacifico', fantasy;
+}
+
+body.main {
+    background-image: url(cupcakeBackground.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#drawedImage {
+    display: block;
+    margin: auto; 
+}
+
+button {
+    display: block;
+    margin: auto;
+}
+
+body.recipes {
+    background: url(cupcake.jpg) no-repeat left bottom;
+    background-size: 100px, 100px;
+    background-attachment: fixed;
+}
+
+body.gallery {
+    background: -webkit-linear-gradient( left top, #F0F8FF, #ADD8E6, #48D1CC);
+    background: -o-linear-gradient(bottom right, #F0F8FF, #ADD8E6, #48D1CC);   
+    background:  -moz-linear-gradient(bottom right, #F0F8FF, #ADD8E6, #48D1CC); 
+    background: linear-gradient(to bottom right, #F0F8FF, #ADD8E6, #48D1CC);
+}
+
+body.special {
+    background-image: url(piece-of-cake.png);
+    background-repeat: repeat-x;
+    background-size: 40px;
+    background-position: top;
+}
+
+#image {
+    position: relative;
+    animation-name: exampleAnimation;
+    animation-duration: 12s;
+    animation-iteration-count: 3;
+    animation-delay: 2s;
+}
+img {
+    -webkit-transition: -webkit-transform 4s;
+    -moz-transition: -moz-transform 4s;
+    -o-transition: -o-transform 4s;
+    transition: transform 4s;
+}
+
+.image {
+    display: block;
+    margin: auto;
+}
+
+#image1:hover{
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+#image2:hover {
+    -webkit-animation: skew 7s infinite linear;
+    -moz-animation: skew 7s infinite linear;
+    animation: skew 7s infinite linear;
+}
+
+#image3:hover {
+    transform: translate(200px,0);
+    -webkit-transform: translate(200px,0);
+    -o-transform: translate(200px,0); 
+    -moz-transform: translate(200px,0);
+}
+
+#cover {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+#cover img {
+    -webkit-transition: opacity 4s ease-in-out;
+    transition: opacity 4s ease-in-out;
+}
+
+#image5{
+    position: absolute;
+}
+
+#image5:hover {
+    opacity: 0;
+}
+
+@-webkit-keyframes skew {
+    from { -webkit-transform: skewX(0deg)}
+    25% { -webkit-transform: skewX(5deg)}
+    50% { -webkit-transform: skewX(0deg)}
+    75% { -webkit-transform: skewX(-5deg)}
+    to { -webkit-transform: skewX(0deg)} 
+}
+
+@keyframes skew {
+    from { -webkit-transform: skewX(0deg)}
+    25% { -webkit-transform: skewX(45deg)}
+    50% { -webkit-transform: skewX(0deg)}
+    75% { -webkit-transform: skewX(-45deg)}
+    to { -webkit-transform: skewX(0deg)} 
+}
+@-moz-keyframes skew {
+    from { -webkit-transform: skewX(0deg)}
+    25% { -webkit-transform: skewX(45deg)}
+    50% { -webkit-transform: skewX(0deg)}
+    75% { -webkit-transform: skewX(-45deg)}
+    to { -webkit-transform: skewX(0deg)} 
+}
+
+@-moz-keyframes exampleAnimation{
+    0% {opacity: 0,5; left: 0px; top: 0px;}
+    25% {opacity: 1; left: 100px; top: 50px;}
+    50% {opacity: 0.5; left: 0px; top: 100px;}
+    75% {opacity: 1; left: 100px; top: 50px;}
+    100% {opacity: 0.5; left: 0px; top: 0px;} 
+}
+
+@keyframes exampleAnimation {
+    0% {opacity: 0,5; left: 0px; top: 0px;}
+    25% {opacity: 1; left: 100px; top: 50px;}
+    50% {opacity: 0.5; left: 0px; top: 100px;}
+    75% {opacity: 1; left: 100px; top: 50px;}
+    100% {opacity: 0.5; left: 0px; top: 0px;} 
+}
+
+@-webkit-keyframes exampleAnimation {
+    0% {opacity: 0,5; left: 0px; top: 0px;}
+    25% {opacity: 1; left: 100px; top: 50px;}
+    50% {opacity: 0.5; left: 0px; top: 100px;}
+    75% {opacity: 1; left: 100px; top: 50px;}
+    100% {opacity: 0.5; left: 0px; top: 0px;} 
+}
+
+#borderimg {
+    border: 10px;
+    border-image-source: url(stripes.png);
+    border-image-slice: 20%;
+    border-image-repeat: repeat;
+    padding: 15px; 
+    border-style: solid;
+}
+
+p.bordered {
+    border-style: groove;
+    border-width: thin;
+    border-color: #6495ED;
+    width: 20%;
+    text-align: center;
+    padding: 5px;
+}
+
+p.firstParagraph{
+    font-variant: small-caps;
+    text-align: center;
+    text-shadow: 2px 2px 4px #6495ED, 4px 4px 5px #DB7093;
+}
+
+p.secondParagraph{
+    line-height: 2;
+}
+
+p.thirdParagraph {
+    font-style: oblique;
+    font-size: 20px;
+}
+
+p.fourthParagraph {
+    font-weight: 900;
+}
+
+.links {
+    display: block;
+    font-size: 36px;
+    text-align: center;
+    padding: 15px;
+    clear:left;
+}
+
+.links a {
+    color: #FFB6C1;
+}
+
+h1 {
+   font-size: 4em;
+   text-align: center;
+}
+
+h1.mainHeader {
+    font-size: 5em;
+    text-align: center;
+    color: 	#DB7093;
+}
+
+.allFlavors{
+  margin:50px;
+  background: #ff9999;
+  border-width: thick;
+  border-style: double;
+  width: 50%;
+  position: relative;
+  left: 400px;
+  border-radius: 15px 50px;
+}
+
+.fruitFlavors{
+  border-radius: 10%;
+  border-width: thin;
+  border-style: solid;
+  border-color: blue;
+  margin-right: 50px;
+  padding: 10px;
+  height: 200px;
+}
+
+.fruitFlavors > :first-child{
+  border-radius: inherit;
+  border-width: thin;
+  border-style: solid;
+
+}
+.fruitFlavors li:nth-last-child(2) li {
+   color: #DC143C;
+}
+
+.fruitFlavors li:last-of-type li {
+   color:#919191;
+}
+
+.welcome{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
+.gift{
+  position: absolute;
+  top: 80px;
+  left: 230px;
+  height: 50px;
+}
+
+#normalText{
+  font-size: 1em;
+}
+#firstSign{
+  font-size: 2em;
+  float: left;
+}
+
+#mainPageAdress{
+  clear: left;
+}
+
+h1.info{
+    background-image: url(piece-of-cake.png);
+    background-origin: border-box;
+    background-size: 33px;
+    background-repeat: repeat-y;
+}
+
+table.recipTable {
+  border-collapse: collapse;
+  width: 80%;
+  margin: auto;
+  font-size: 15pt;
+}
+
+table.recipTable td{
+   border: 1px solid black;
+   padding: 5px;
+   text-align: center;
+   vertical-align: middle;
+   height: 20px;
+}
+
+table.recipTable th{
+  border: 3px solid #ff9999;
+  padding: 5px;
+  text-align: center;
+  vertical-align: top;
+   height: 50px;
+}
+
+table.credentialTable th {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
+    height: 20px; 
+}
+
+
+table.credentialTable td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
+    height: 20px;   
+}
+
+table.credentialTable {
+    border-collapse: collapse;
+    width: 80%;
+    margin: auto;
+    font-size: 15pt;
+  }
+
+tr.customRow{
+  background-color: #ff9999;
+}
+
+footer {
+    font-size: 12px;
+}
+
+:checked {
+    width: 30px;
+    height: 20px;
+}
+
+input[type=text]:enabled{
+    background-color: #FFB6C1;
+}
+
+p:target {
+  font-size: 30px;
+  text-align: center;
+}
+
+
+/*----- Drop down menu -----*/
+
+.menu {
+    position: relative;
+    width: 100%;
+}
+
+.menu a {
+    color:#919191;
+    padding: 10px;
+    width: 100%;
+}
+
+.menu > ul > li a:hover{
+    color: #ff9999;
+    background: black;
+}
+
+.menu li {
+    display:inline-block;
+    position:relative;
+    font-size:19px;
+}
+
+.menu li:hover .sub-menu {
+    z-index:1;
+    opacity:1;
+}
+
+.sub-menu {
+    width:100%;
+    padding: 0px;
+    position:absolute;
+    top:100%;
+    left:0px;
+    z-index:-1;
+    opacity:0;
+}
+
+
+.sub-menu li {
+    display:block;
+    font-size:16px;
+}
+
+.sub-menu li a {
+    padding:10px 30px;
+    display:block;
+}
+
+.sub-menu li:hover .sub-sub-menu{
+  z-index:1;
+  opacity:1;
+}
+
+.sub-sub-menu{
+  width:160%;
+  position:absolute;
+  padding: 0px;
+  left:100px;
+  z-index:-1;
+  opacity:0;
+}
+
+.sub-sub-menu a{
+    color:#919191;
+}
+
+.sub-sub-menu li:nth-child(4) a{
+   color:#DC143C;
+}
+
+.sub-sub-menu li:only-child a{
+   font-style: italic;
+}
+
+.sub-sub-menu li:first-child a{
+   background-color: #F0FFFF;
+}
+
+.sub-sub-menu li:last-child a{
+    color: black;
+}
+
+/*---------------------------------- media rule-----------------------------*/
+@media screen and (max-width: 500px) {
+    body{
+        background-color: red;
+    }
+}
+@media screen and (max-height: 300px) {
+    body{
+        background-color: yellow;
+    }
+}
+
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+[class*="col-"] {
+    width: 100%;
+}
+
+.imageCake{
+  float: left;
+  padding: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
