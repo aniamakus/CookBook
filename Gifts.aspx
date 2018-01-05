@@ -6,17 +6,23 @@
 <head runat="server">
     <title>Upominki</title>
     <link href="~/Styles/cookBookStyle.css" rel="stylesheet" type="text/css" />
+     <style type="text/css">
+        #nav{
+            clear: both;
+            text-align: center;
+            display:table;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="links" style="margin:0 auto; width: 853px;">
-            <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" >
+        <div class="links" id="nav">
+            <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal"  style="font-size:larger">
                 <Items>
                     <asp:MenuItem NavigateUrl="~/StartPage.aspx" Text="Strona główna" />
-                    <asp:MenuItem NavigateUrl="~/StartPage.aspx" Text="Przepisy" />
-                    <asp:MenuItem NavigateUrl="~/StartPage.aspx" Text="Kontakt" />
+                    <asp:MenuItem NavigateUrl="~/Recipe.aspx" Text="Przepisy" />
                     <asp:MenuItem NavigateUrl="~/Gifts.aspx" Text="Upominki" />
-                    <asp:MenuItem NavigateUrl="~/Upominki.aspx" Text="Informacje" />
                 </Items>
             </asp:Menu>
             </div>
