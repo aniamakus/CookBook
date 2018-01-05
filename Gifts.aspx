@@ -37,27 +37,14 @@
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1"  Display="Dynamic" runat="server" ControlToValidate="LastNameInput" Text="Pole nie może być  puste"  ForeColor="Red"></asp:RequiredFieldValidator>
         <br />
         E-mail:<br />
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-&nbsp;(email@gmail.com)<br />
+        <asp:TextBox ID="EmailLabel" runat="server"></asp:TextBox>
+        (email@gmail.com)<asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Niepoprawny format maila" ForeColor="Red" ControlToValidate="EmailLabel" ValidationExpression="^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"></asp:RegularExpressionValidator>
+        <br />
         Telefon:<br />
-        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TelLabel" runat="server"></asp:TextBox>
         <asp:Label ID="Label1" runat="server" Text=" (###-###-###)"></asp:Label>
         <br />
-        Miasto zamieszkania:<br />
-        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
-        <br />
-        Kod pocztowy:<br />
-        <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
-        <br />
-        Ulica<br />
-        <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
-        <br />
-        Nr domu / nr lokalu:<br />
-        <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
-        <br />
         Ilość lat:<br />
-
-       
         <asp:TextBox ID="Age" runat="server" OnTextChanged="Age_TextChanged"></asp:TextBox>
 
        
@@ -65,19 +52,26 @@
 
        
         <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="Age" Text="Wiek musi być pomiędzy 18-150 lat" MinimumValue="18" MaximumValue="150" Type="Integer"></asp:RangeValidator>
+        <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="Age" Text="Wiek musi być pomiędzy 18-150 lat" MinimumValue="18" MaximumValue="150" Type="Integer" ForeColor="red"></asp:RangeValidator>
 
-       
+      
+        <br />
+        <br />
+            <asp:Button ID="Button2" runat="server" Text="Pokaż dodatkowe pola" OnClick="OpenExtraFields" />
+        <br />
+
+        <asp:TextBox ID="LivePlace" runat="server" Text="Miasto zamieszkania" Visible="false"></asp:TextBox>
+        <asp:TextBox ID="BirthPlace" runat="server" Text="Miasto urodzenia" Visible="false" ></asp:TextBox>
+        <br />
+        <asp:CompareValidator ID="CompareValidator1" ControlToCompare="BirthPlace" ControlToValidate="LivePlace" runat="server" Operator="NotEqual" ErrorMessage="Mieszkasz w tym samym mieście w którym się urodziłeś" Type="String"></asp:CompareValidator>
+        <br />
         <p>
-            <asp:Button ID="Button2" runat="server" Text="Pokaż dodatkowe pola" OnClientClick="OpenExtraFields" />
+            <asp:Button ID="Button1" runat="server" Text="Przejdź dalej"/>
+            <asp:Button ID="cleanButton" runat="server" Text="Wyczyść" OnClick="CleanFields"/>
         </p>
 
        
-        <p>
-            <asp:Button ID="Button1" runat="server" Text="Przejdź dalej" OnClientClick="SubmitForm" />
-            <asp:Button ID="Button3" runat="server" Text="Wyczyść" OnClientClick="CleanFields"/>
-        </p>
+        <asp:Label ID="outputLabel" runat="server" Text="OutputLabel" Visible="false"></asp:Label>
 
        
     </form>
