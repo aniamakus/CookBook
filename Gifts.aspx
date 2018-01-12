@@ -23,6 +23,7 @@
                     <asp:MenuItem NavigateUrl="~/StartPage.aspx" Text="Strona główna" />
                     <asp:MenuItem NavigateUrl="~/Recipe.aspx" Text="Przepisy" />
                     <asp:MenuItem NavigateUrl="~/Gifts.aspx" Text="Upominki" />
+                    <asp:MenuItem NavigateUrl="~/Products.aspx" Text="Sklep" />
                 </Items>
             </asp:Menu>
             </div>
