@@ -1,48 +1,18 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="StartPage.aspx.cs" Inherits="StartPage" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Start.aspx.cs" Inherits="Start" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="title" Runat="Server">
+    Home
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="contentBody" Runat="Server">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Strona główna</title>
-    <link href="~/Styles/cookBookStyle.css" rel="stylesheet" type="text/css" />
-    <style type="text/css">
-        #form1 {
-            height: 50px;
-        }
-        #header1{
-            font-size: 5em;
-            text-align: center;
-            color: 	#DB7093;
-        } 
-        #nav{
-            clear: both;
-            text-align: center;
-            display:table;
-            margin: 0 auto;
-        }
-    </style>
-</head>
-<body>
-
-    <form id="form1" runat="server">
-        <div class="links" id="nav">
-            <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" style="font-size:larger" >
-                <Items>
-                    <asp:MenuItem NavigateUrl="~/StartPage.aspx" Text="Strona główna" />
-                    <asp:MenuItem NavigateUrl="~/Recipe.aspx" Text="Przepisy" />
-                    <asp:MenuItem NavigateUrl="~/Gifts.aspx" Text="Upominki" />
-                    <asp:MenuItem NavigateUrl="~/Products.aspx" Text="Sklep" />
-                </Items>
-            </asp:Menu>
-            </div>
-        
-         <div>
+     <div>
             <h1><asp:Image ID="Image2" runat="server" Height="60px" ImageUrl="~/Images/cupcake.jpg" Width="60px" />CookBook<asp:Image ID="Image1" runat="server" Height="60px" ImageUrl="~/Images/cupcake.jpg" Width="60px" /></h1>
             <br />
-        </div>
-        
-        <h3 style="color: rgb(0, 0, 0); font-family: Pacifico, fantasy; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(240, 248, 255); text-decoration-style: initial; text-decoration-color: initial;">Galeria przykładowych zdjęć wykonanych na bazie przepisow znalezionych na naszej stronie</h3>
+     </div>
+
+    <h3 style="color: rgb(0, 0, 0); font-family: Pacifico, fantasy; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(240, 248, 255); text-decoration-style: initial; text-decoration-color: initial;">Galeria przykładowych zdjęć wykonanych na bazie przepisow znalezionych na naszej stronie</h3>
             <asp:Image ID="Image6" runat="server" AlternateText="img1" Height="256px" ImageUrl="https://s5.favim.com/orig/150312/awesome-cake-candy-chocolate-Favim.com-2555775.jpg" />
             <asp:Image ID="Image3" runat="server" AlternateText="img2" Height="256px" ImageUrl="https://78.media.tumblr.com/ce7029a24929edee55674a2278c169bd/tumblr_oxs2giNA6j1toxqo3o1_500.jpg" />
             <asp:Image ID="Image4" runat="server" AlternateText="img3" Height="256px" ImageUrl="http://www.oxygen.com/sites/nbcuoxygen/files/styles/blog-post--computer/public/field_blog_image/2016/03/shakes.jpg?itok=rbAKGQIn&amp;timestamp=1457561423" />
@@ -111,7 +81,5 @@
         </div>
       </details>
       <p id="p1"> SMACZNEGO !! </p>
-        </form>
+</asp:Content>
 
-</body>
-</html>

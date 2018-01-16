@@ -132,7 +132,7 @@ public partial class OrderSummary : System.Web.UI.Page
 
     private void summary()
     {
-        summaryLabel.Text = "Całkowita wartość zamówienia: " + order.productsPrice();
+        summaryLabel.Text = "Całkowita wartość zamówienia: " + order.inclusivePrice();
     }
 
     protected void deliveryDropDownListSelectedIndexChanged(object sender, EventArgs e)

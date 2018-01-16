@@ -40,7 +40,6 @@ public partial class Products : System.Web.UI.Page
         productCheckBoxList.DataBind();
         productsPlaceHolder.Controls.Add(productCheckBoxList);
         this.productCheckBoxList = productCheckBoxList;
-        categoryName.Text = category.Name.ToUpper();
         productsDiv.Visible = true;
     }
 
@@ -48,13 +47,13 @@ public partial class Products : System.Web.UI.Page
     {
         List<Category> result = new List<Category>();
         Hashtable books = new Hashtable();
-        books.Add("Książka kucharska słodkości w trzech wymiarach", 65.99);
-        books.Add("Kuchnia polska", 29.99);
-        books.Add("Kuchnia Włoska", 35.99);
+        books.Add("Książka kucharska słodkości w trzech wymiarach", 65);
+        books.Add("Kuchnia polska", 29);
+        books.Add("Kuchnia Włoska", 35);
         result.Add(new Category("Ksiązki", books));
         Hashtable accessory = new Hashtable();
-        accessory.Add("mikser", 399.99);
-        accessory.Add("forma do pieczenia", 25.55);
+        accessory.Add("mikser", 399);
+        accessory.Add("forma do pieczenia", 25);
         result.Add(new Category("Akcesoria", accessory));
         return result;
     }
@@ -80,6 +79,6 @@ public partial class Products : System.Web.UI.Page
 
     protected void categoryRadioButtonList_SelectedIndexChanged(object sender, EventArgs e)
     {
-
+        categoryName.Text = categoryRadioButtonList.SelectedItem.Text;
     }
 }

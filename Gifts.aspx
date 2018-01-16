@@ -1,36 +1,13 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Gifts.aspx.cs" Inherits="Gifts" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master"  AutoEventWireup="true" CodeFile="Gifts.aspx.cs" Inherits="Gifts" %>
 
-<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Upominki</title>
-    <link href="~/Styles/cookBookStyle.css" rel="stylesheet" type="text/css" />
-     <style type="text/css">
-        #nav{
-            clear: both;
-            text-align: center;
-            display:table;
-            margin: 0 auto;
-        }
-    </style>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div class="links" id="nav">
-            <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal"  style="font-size:larger">
-                <Items>
-                    <asp:MenuItem NavigateUrl="~/StartPage.aspx" Text="Strona główna" />
-                    <asp:MenuItem NavigateUrl="~/Recipe.aspx" Text="Przepisy" />
-                    <asp:MenuItem NavigateUrl="~/Gifts.aspx" Text="Upominki" />
-                    <asp:MenuItem NavigateUrl="~/Products.aspx" Text="Sklep" />
-                </Items>
-            </asp:Menu>
-            </div>
-
-        <div>
-        <h1>Wylosuj swój upominek</h1>
-      </div>
+<asp:Content ID="Content1" ContentPlaceHolderID="title" Runat="Server">
+    Przepisy
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="contentBody" Runat="Server">
+    <h1>Wylosuj swój upominek</h1>
         <p><b>Weź udział w losowaniu!</b></p>
         <p>Co miesiąc spośród uczestników wylosujemy jedną osobę, która otrzyma od nas upominek w formie naszej autorskiej ksiązki kucharskiej. Wystarczy wypełnić formularz, dzięki któremu skontaktujemy się ze zwycięzca.</p>
         <p><b>Najbliższe losowanie <mark>20.10.2017!</mark></b></p>
@@ -79,9 +56,6 @@
 
        
         <asp:Label ID="outputLabel" runat="server" Text="OutputLabel" Visible="false"></asp:Label>
+    </asp:Content>
 
-       
-    </form>
 
-</body>
-</html>

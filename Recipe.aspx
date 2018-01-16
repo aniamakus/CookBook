@@ -1,33 +1,14 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Recipe.aspx.cs" Inherits="Recipe" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master"  AutoEventWireup="true" CodeFile="Recipe.aspx.cs" Inherits="Recipe" %>
 
-<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Przepisy</title>
-    <link href="~/Styles/cookBookStyle.css" rel="stylesheet" type="text/css" />
-     <style type="text/css">
-        #nav{
-            clear: both;
-            text-align: center;
-            display:table;
-            margin: 0 auto;
-        }
-    </style>
-</head>
-<body>
-    <form id="form1" runat="server">
-       <div class="links" id="nav" >
-            <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" style="font-size:larger">
-                <Items>
-                    <asp:MenuItem NavigateUrl="~/StartPage.aspx" Text="Strona główna" />
-                    <asp:MenuItem NavigateUrl="~/Recipe.aspx" Text="Przepisy" />
-                    <asp:MenuItem NavigateUrl="~/Gifts.aspx" Text="Upominki" />
-                    <asp:MenuItem NavigateUrl="~/Products.aspx" Text="Sklep" />
-                </Items>
-            </asp:Menu>
-            </div>
-        <h1> Przepisy </h1>
+<asp:Content ID="Content1" ContentPlaceHolderID="title" Runat="Server">
+    Przepisy
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="contentBody" Runat="Server">
+
+    <h1> Przepisy </h1>
         <p class="recipes" style="text-align:center; font-size:large">Przepisy wraz ze składnikami &reg; Nacisnij na zdjęcie jeśli chcesz je pobrać. Pobierz wszystkie: <a href="ftp://ftp.atman.pl/test1mb" ><img src= "https://image.flaticon.com/icons/svg/0/532.svg" alt="HTML5 Icon" height="20"/></a> </p>
         <div style="text-align:center">
         <asp:Table ID="Table1" runat="server" BorderWidth="1" Font-Size="Large" GridLines="Both" class="recipTable">
@@ -121,7 +102,10 @@
             </asp:TableRow>
             
         </asp:Table>
-            </div>
-    </form>
-</body>
-</html>
+      </div>
+</asp:Content>
+
+
+
+
+

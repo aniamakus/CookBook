@@ -1,35 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="OrderSummary.aspx.cs" Inherits="OrderSummary" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master"  AutoEventWireup="true" CodeFile="OrderSummary.aspx.cs" Inherits="OrderSummary" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Przepisy</title>
-    <link href="~/Styles/cookBookStyle.css" rel="stylesheet" type="text/css" />
-     <style type="text/css">
-        #nav{
-            clear: both;
-            text-align: center;
-            display:table;
-            margin: 0 auto;
-        }
-    </style>
-</head>
-<body>
-    <form id="form1" runat="server">
-       <div class="links" id="nav" >
-            <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" style="font-size:larger">
-                <Items>
-                    <asp:MenuItem NavigateUrl="~/StartPage.aspx" Text="Strona główna" />
-                    <asp:MenuItem NavigateUrl="~/Recipe.aspx" Text="Przepisy" />
-                    <asp:MenuItem NavigateUrl="~/Gifts.aspx" Text="Upominki" />
-                </Items>
-            </asp:Menu>
-            </div>
-        <div>         
-        <asp:PlaceHolder ID="dropDownListsPlaceHolder" runat="server" >
+<asp:Content ID="Content1" ContentPlaceHolderID="title" Runat="Server">
+    Przepisy
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="contentBody" Runat="Server">
+     <asp:PlaceHolder ID="dropDownListsPlaceHolder" runat="server" >
             <asp:DropDownList ID="deliveryDropDownList" runat="server" AutoPostBack="True">
                 <asp:ListItem>Kurier</asp:ListItem>
                 <asp:ListItem>Poczta</asp:ListItem>
@@ -48,6 +25,4 @@
         <asp:Button ID="orderButton" runat="server" OnClick="orderButton_Click" Text="Złóż zamówienie" Visible="False" /><br />
         <a href="./Products.aspx">Powrót do sklepu</a>
         </div>
-    </form>
-</body>
-</html>
+    </asp:Content>

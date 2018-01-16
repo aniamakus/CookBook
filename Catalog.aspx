@@ -1,28 +1,13 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Catalog.aspx.cs" Inherits="Styles_Catalog" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master"  AutoEventWireup="true" CodeFile="Catalog.aspx.cs" Inherits="Styles_Catalog" %>
 
-<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<link rel="stylesheet" type="text/css" href="basics.css">
-    <title></title>
-</head>
-<body>
-    <div id="header">
-        <img src="logo.ico">
-        <h1 id="title">Ko<br>ty<br>na<br>DŚ</h1>
-        <nav id="menu">
-            <ul>
-                <li><a href="./index.html">Strona główna</a></li>
-                <li><a href="./catalog.html">Adopcja kotów</a></li>
-                <li><a href="./Form.aspx">Mój profil</a></li>
-            </ul>
-        </nav>
-    </div>
-    <form id="form1" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="title" Runat="Server">
+    Katalog
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="contentBody" Runat="Server">
     <div>
-
         <asp:RadioButtonList ID="categoryRadioButtonList" runat="server" AutoPostBack="True">
         </asp:RadioButtonList>
         <asp:Panel runat="server" ID="productsDiv" Visible="false"> 
@@ -35,6 +20,5 @@
         <p>Liczba rzeczy w koszyku: <asp:Label ID="numOfThingsInBasketLabel" runat="server" Text="0"></asp:Label></p>
         <a href="./OrderSummary.aspx">Podsumowanie zamówienia</a>
     </div>
-    </form>
-</body>
-</html>
+</asp:Content>
+
