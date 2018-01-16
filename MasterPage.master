@@ -57,6 +57,7 @@
                     <asp:MenuItem NavigateUrl="~/Recipe.aspx" Text="Przepisy" />
                     <asp:MenuItem NavigateUrl="~/Gifts.aspx" Text="Upominki" />
                     <asp:MenuItem NavigateUrl="~/Products.aspx" Text="Sklep" />
+                    <asp:MenuItem NavigateUrl="~/PublicInfo.aspx" Text="Oferowane produkty" />
                 </Items>
             </asp:Menu>
             </div>

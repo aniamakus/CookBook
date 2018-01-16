@@ -469,3 +469,18 @@ p:target {
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
 }
+
+.sqlDataLabels {
+    font-size: large;
+    font-weight: bold;
+}
+
+.description {
+    font-size: medium;
+}
+
+.date {
+    float: right;
+    margin: 5px;
+    font-size: medium;
+    color: darkslategrey;

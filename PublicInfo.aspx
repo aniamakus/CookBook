@@ -6,17 +6,44 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="contentBody" Runat="Server">
-    <div>
-            <h1>Oferowane produkty:</h1>
-        </div>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="657px">
-            <Columns>
-                <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
-                <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
-                <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
-                <asp:BoundField DataField="Created" HeaderText="Created" SortExpression="Created" />
-            </Columns>
-        </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CookBookDb %>" SelectCommand="SELECT [Name], [Created], [Price], [Description] FROM [Books]"></asp:SqlDataSource>
+    <style>
+        .title{
+            font-size:large;
+        }
+        .sqlDataLabels{
+        font-size:large;
+        font-weight:bold;
+        margin:0;
+    }
+    .description{
+        font-size:medium;
+    }
+    .date{
+        float:right;
+        margin:5px;
+        font-size:medium;
+        color:darkslategrey;
+}
+    </style>
+    <h1>Oferowane produkty:</h1>
+    <p class="title"> Ksiązki, które znajdziesz w naszej ofercie! Serdecznie polecamy!  </p>
+    <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource2" Width="1050px">
+        <ItemTemplate>  
+            <p class="sqlDataLabels">
+            <asp:Label ID="NameLabel" runat="server" Text='<%# Eval("Name") %>' />
+            <asp:Label ID="PriceLabel" runat="server" Text='<%# Eval("Price") %>' /> zł
+            </p>
+            <p class="description">
+            Opis:
+            <br />
+            <asp:Label ID="DescriptionLabel" runat="server" Text='<%# Eval("Description") %>' />
+             </p>
+            <p class="date">
+            Dodano:
+            <asp:Label ID="CreatedLabel" runat="server" Text='<%# Eval("Created") %>' />
+            </p>
+        </ItemTemplate>
+    </asp:DataList>
+    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:CookBookDb %>" SelectCommand="SELECT [Name], [Price], [Description], [Created] FROM [Books]"></asp:SqlDataSource>
 </asp:Content>
 
