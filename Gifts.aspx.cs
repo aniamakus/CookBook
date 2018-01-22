@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 public partial class Gifts : System.Web.UI.Page
 {
@@ -24,6 +19,7 @@ public partial class Gifts : System.Web.UI.Page
 
     private void FillOutputLabel()
     {
+       
         string name = Name.Text;
         string lastName = LastNameInput.Text;
         string email = EmailLabel.Text;

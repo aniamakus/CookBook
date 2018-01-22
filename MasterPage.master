@@ -6,40 +6,56 @@
 <head runat="server">
     <title>
         <asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder>
+
     </title>
     <link href="~/Styles/cookBookStyle.css" rel="stylesheet" type="text/css" />
-    <style type="text/css">
-        #form1 {
-            height: 50px;
-        }
-        #header1{
-            font-size: 5em;
-            text-align: center;
-            color: 	#DB7093;
-        } 
-        #nav{
-            clear: both;
-            text-align: center;
-            display:table;
-            margin: 0 auto;
-        }
-        .clear{
-            clear:both;
-        }
-        .footer{
-            height: 30px;
-            background-color: cadetblue;
-            color:black;  
-        }
-        .footer h3{
-            text-align:center;
-            padding:5px;
-        }  
-        .header image{
-            height:50px
-        }
-    </style>
+    <style>
+        
+    #form1 {
+        height: 50px;
+    }
 
+    #header1 {
+        font-size: 5em;
+        text-align: center;
+        color: #DB7093;
+    }
+
+    #nav {
+        clear: both;
+        text-align: center;
+        display: table;
+        margin: 0 auto;
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    .footer {
+        height: 30px;
+        background-color: cadetblue;
+        color: black;
+    }
+
+        .footer h3 {
+            text-align: center;
+            padding: 5px;
+        }
+
+    .header{
+        position:relative;
+    }
+
+    .loginDisplay {
+    font-size: 1.1em;
+    display: block;
+    padding: 10px;
+    color: black;
+    float:right;
+}
+
+    </style>
 
     <asp:ContentPlaceHolder id="head" runat="server">
         
@@ -49,6 +65,17 @@
     <form id="form1" runat="server">
         <div class="header">
             <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/logo.png" Height="50" />
+            <div class="loginDisplay">
+                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                         <a href="LogIn.aspx" ID="HeadLoginStatus" runat="server">Zaloguj się</a> 
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        Witaj: <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
+                         <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="RedirectToLoginPage" LogoutText="Wyloguj się" LogoutPageUrl="~/"/> 
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </div>
         </div>
             <div class="links" id="nav">
             <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal"  style="font-size:larger">
@@ -58,12 +85,14 @@
                     <asp:MenuItem NavigateUrl="~/Gifts.aspx" Text="Upominki" />
                     <asp:MenuItem NavigateUrl="~/Products.aspx" Text="Sklep" />
                     <asp:MenuItem NavigateUrl="~/PublicInfo.aspx" Text="Oferowane produkty" />
+                    <asp:MenuItem NavigateUrl="~/ProtectedContent/Special.aspx" Text="Komentarze" />
                 </Items>
             </asp:Menu>
             </div>
         <div class="clear"></div>
         <div class="content">
-          <asp:ContentPlaceHolder ID="contentBody" runat="server"></asp:ContentPlaceHolder>
+          <asp:ContentPlaceHolder ID="contentBody" runat="server">
+          </asp:ContentPlaceHolder>
         </div>
         <div class="clear"></div>
         <div class="footer">   

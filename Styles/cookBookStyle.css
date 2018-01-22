@@ -470,17 +470,50 @@ p:target {
     .col-12 {width: 100%;}
 }
 
-.sqlDataLabels {
-    font-size: large;
-    font-weight: bold;
+#form1 {
+    height: 50px;
 }
 
-.description {
-    font-size: medium;
+#header1 {
+    font-size: 5em;
+    text-align: center;
+    color: #DB7093;
 }
 
-.date {
-    float: right;
-    margin: 5px;
-    font-size: medium;
-    color: darkslategrey;
+#nav {
+    clear: both;
+    text-align: center;
+    display: table;
+    margin: 0 auto;
+}
+
+.clear {
+    clear: both;
+}
+
+.footer {
+    height: 30px;
+    background-color: cadetblue;
+    color: black;
+}
+
+    .footer h3 {
+        text-align: center;
+        padding: 5px;
+    }
+
+.header image {
+    height: 50px
+}
+
+.logIn {
+    float: right
+}
+
+.loginDisplay {
+    font-size: 1.1em;
+    display: block;
+    padding: 10px;
+    color: black;
+    float:right;
+}
